@@ -1,0 +1,372 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+/* -----------------------------------------------------------BARRA DE TAREAS-------------------------------------------------------------*/
+
+/* Centrado vertical opcional para todo el contenido de .container */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    /* Centrar horizontalmente los elementos dentro de .header */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    /* Centrar horizontalmente los elementos dentro de .top-bar */
+    justify-content: center; /* Centra horizontalmente */
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+    height: 40px; /* Ajusta esto según el tamaño de tu logo */
+}
+
+.search-bar {
+    flex-grow: 1; /* Esto permite que la barra de búsqueda ocupe todo el espacio disponible */
+    margin: 0 20px; /* Añade margen a los lados para separarla de los elementos adyacentes */
+}
+
+.search-bar input[type="search"] {
+    width: 100%; /* Hace que el input ocupe todo el ancho del contenedor */
+    padding: 8px;
+    font-size: 16px; /* Ajusta esto según tus preferencias */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.navigation-bar {
+    display: flex;
+    /* Centrar horizontalmente los elementos dentro de .navigation-bar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+*/
+.header, .top-bar, .navigation-bar {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0; /* Padding superior e inferior sin afectar horizontalmente */
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px; /* Ajusta el margen como sea necesario */
+}
+
+.nav-item img {
+    width: 24px; /* Ajusta el tamaño de tus íconos */
+    height: 24px; /* Ajusta el tamaño de tus íconos */
+    margin-bottom: 4px; /* Espacio entre el ícono y el texto */
+}
+
+.nav-item span {
+    font-size: 12px; /* Ajusta esto según tus preferencias */
+    color: #666; /* Ajusta el color del texto según tus preferencias */
+}
+
+/*------------------------------------------------------------------------------- AREA DEL USUARIO------------------------------------------------ */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+  
+
+.profile-card {
+    width: 200px; /* Ajusta el ancho según necesites */
+    margin: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.profile-header {
+    background: #f0f2f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-image {
+    margin-top: -5px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.profile-name {
+    margin: 0;
+}
+
+.profile-role {
+    color: #777;
+    font-size: 0.85em;
+}
+
+.profile-stats {
+    padding: 20px;
+    background: #fff;
+    color: #555;
+}
+
+.profile-stats div {
+    margin-bottom: 10px;
+}
+
+.profile-footer {
+   padding: 20px;
+   background: #f0f2f5;
+   color: #555;
+}
+
+.profile-footer a {
+   color: #0066cc;
+   text-decoration: none;
+}
+
+
+/* ------------barra de acciones de post----------- */
+
+.fixed-action-bar {
+    border-radius: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: start; /* O 'space-between' para distribuir espacio uniformemente */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+.fixed-action-bar .incert-bar-post {
+    margin-right: 10px; /* Ajusta según sea necesario */
+}
+
+.fixed-action-bar button {
+    border: none;
+    background-color: transparent;
+    margin-right: 10px; /* Ajusta según sea necesario */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.fixed-action-bar button i {
+    margin-right: 5px; /* Añade un pequeño espacio entre el ícono y el texto */
+}
+
+
+
+/* ------------------------Contenido de post--------------------------- */
+
+.posts-container {
+    padding-top: 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre posteos */
+  }
+  
+
+.card {
+   max-width: 700px;
+   min-width: 100px;
+   margin: 20px auto;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.card-image-1 {
+    width: 100%;
+    height: 250px;
+    background: url('https://www.iebschool.com/blog/wp-content/uploads/2023/09/controlador-sujecion-manos-alto-angulo-1-scaled.jpg') no-repeat center center;
+    background-size: cover;
+    display: block;
+}
+
+.card-image-2 {
+    width: 100%;
+    height: 250px;
+    background: url('https://static.bandainamcoent.eu/high/dark-souls/dark-souls-3/00-page-setup/ds3_game-thumbnail.jpg') no-repeat center center;
+    background-size: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.card-title {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.card-subtitle {
+    padding: 0;
+    margin: 10px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.card-actions {
+    padding: 30px;
+    background-color: #f5f5f5;
+    text-align: right;
+}
+
+.share-button {
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* -----------------------------Barra de feeds-------------------------*/
+
+.feed-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px; /* Ajusta el ancho según tus necesidades */
+    margin: 10px;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.feed-card h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.profile-suggestion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-suggestion img {
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    width: 48px; /* Tamaño de la imagen */
+    height: 48px; /* Tamaño de la imagen */
+    margin-right: 10px;
+}
+
+.profile-info strong {
+    font-size: 0.9rem;
+    display: block; /* Asegura que el nombre se muestre en su propia línea */
+}
+
+.profile-info p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.profile-info button {
+    background-color: #0b78de;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.feed-card a {
+    display: block; /* Hace que el enlace se muestre en su propia línea */
+    color: #0b78de;
+    text-decoration: none;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Añade pseudo-clases para hover/active si es necesario */
+.profile-info button:hover {
+    background-color: #095ca3;
+}
+
+
+
+.sidebar-card {
+    padding: 20px;
+    max-width: 300px; /* El mismo ancho que el .feed-card */
+    margin: 10px;
+    top: 20px; /* Ajusta según la altura de tu header o barra de navegación */
+}
+
+.sidebar-image {
+    width: 100%; /* Hace que la imagen se ajuste al ancho de .sidebar-card */
+    border-radius: 10px; /* Si quieres que las esquinas de la imagen sean redondeadas */
+    margin-bottom: 20px;
+}
+
+.sidebar-content h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.sidebar-links {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar-links li a {
+    text-decoration: none;
+    color: #0b78de; /* Un color de enlace azul típico */
+    font-size: 0.8rem;
+    display: block; /* Hace que los enlaces se muestren en su propia línea */
+    margin-bottom: 10px; /* Espaciado entre enlaces */
+}
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Alinea el logo y el texto verticalmente */
+    margin-top: 20px;
+}
+
+.sidebar-footer .linkedin-logo {
+    width: 50px; /* Ajusta esto según el tamaño de tu logo */
+    margin-bottom: 10px;
+}
+
+.sidebar-footer p {
+    font-size: 0.8rem;
+    color: #666;
+}
