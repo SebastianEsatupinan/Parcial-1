@@ -151,35 +151,71 @@ body {
 /* ------------barra de acciones de post----------- */
 
 .fixed-action-bar {
-    border-radius: 10px;
-    position: -webkit-sticky;
+    border-radius: 20px;
     position: sticky;
     top: 0;
-    background-color: #fff;
+    background-color: #f0f0f0;
     z-index: 10;
     display: flex;
-    align-items: center;
-    justify-content: start; /* O 'space-between' para distribuir espacio uniformemente */
+    flex-direction: column; /* Organiza los contenedores en columnas */
+    align-items: stretch;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding: 10px;
 }
 
-.fixed-action-bar .incert-bar-post {
-    margin-right: 10px; /* Ajusta según sea necesario */
+.input-container {
+    margin-bottom: 10px; /* Espacio entre el input y los botones */
 }
 
-.fixed-action-bar button {
+.input-container input[type="text"] {
+    width: 90%; /* Hace que el input ocupe todo el ancho */
     border: none;
-    background-color: transparent;
-    margin-right: 10px; /* Ajusta según sea necesario */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
 }
 
-.fixed-action-bar button i {
-    margin-right: 5px; /* Añade un pequeño espacio entre el ícono y el texto */
+.buttons-container {
+    display: flex; /* Los botones en fila */
+    justify-content: space-between; /* Espaciado entre botones */
 }
+
+.button-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    flex-grow: 1; /* Los botones crecen de forma uniforme */
+    margin: 0 5px; /* Espacio horizontal entre botones */
+}
+
+.button-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px; /* El tamaño de tus iconos */
+    height: 24px; /* El tamaño de tus iconos */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icono-publicar::after {
+    background-image: url('https://cdn.icon-icons.com/icons2/1369/PNG/512/-publish_90561.png');
+}
+
+.icono-multimedia::after {
+    background-image: url('https://fototrending.com/wp-content/uploads/camara-impresion-instantanea.png');
+}
+
+.icono-evento::after {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/014/332/276/original/colored-pencils-3d-illustration-png.png');
+}
+
+.icono-articulo::after {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/010/160/208/non_2x/document-file-icon-paper-doc-sign-free-png.png');
+}
+
 
 
 
@@ -318,7 +354,7 @@ body {
     background-color: #095ca3;
 }
 
-
+/* _______________________________________________________________________________ */
 
 .sidebar-card {
     padding: 20px;
@@ -370,3 +406,82 @@ body {
     font-size: 0.8rem;
     color: #666;
 }
+
+/* ---------------------------------------------------Parte del chat --------------------------------*/
+
+.contenedor-del-chat {
+   
+    background: #fff;
+    border-radius: 10px;
+    position: sticky; /* Cambiado de fixed a sticky */
+    top: 50px; /* Esto se ajustará para que la sección comience a pegarse una vez que alcance la parte superior de la ventana del navegador */
+    height: 100vh; /* Se ajusta a la altura de la ventana del navegador */
+    width: 250px; /* O el ancho que desees para tu chat */
+    overflow-y: auto; /* Si tu chat es más largo que la pantalla, esto permitirá desplazarse dentro del chat */
+    right: -10px; /* Esto alineará tu chat a la derecha */
+    z-index: 10; /* Asegúrate de que el z-index sea mayor que el del contenido con el que podría superponerse */
+}
+  
+.buscador-mensajes {
+    padding: 10px;
+}
+  
+.buscador-mensajes input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+}
+  
+.titulo-mensajes {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+  
+.titulo-mensajes h2 {
+    margin: 0;
+    font-size: 14px;
+}
+  
+.lista-mensajes {
+    overflow-y: auto;
+}
+  
+.mensaje {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+  
+.mensaje img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+  
+.info-mensaje {
+    flex-grow: 1;
+}
+  
+.info-mensaje h3 {
+    margin: 0;
+    font-size: 16px;
+}
+  
+.info-mensaje p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+  
+.fecha-mensaje {
+    font-size: 12px;
+    color: #888;
+}
+  
+  
